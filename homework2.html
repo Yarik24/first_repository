@@ -1,0 +1,149 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    //Задача 1
+
+    /*
+    var a = 1, b = 1, c, d;
+    c = ++a; alert(c);           // 2 
+    // Так как сначала стоит оператор ++, то происходит увелечиние переменной а, а затем новое значение присваивается переменной с.
+    d = b++; alert(d);           // 1
+    // Так как сначасла стоит переменная b, а затем оператор ++, то впервую очередь происходит присвоение переменной d значения переменной b, а затем увелечение значания переменной b.
+    c = (2 + ++a); alert(c);      // 5
+    // Тот же принцип, что и в первом примере, только а = 2, так как увеличила свое значение в первом примере.
+    d = (2 + b++); alert(d);      // 4
+    // Аналогично ситуации третьего примера.
+    alert(a);                    // 3
+    alert(b);                    // 3
+    */
+
+
+    //Задача 2
+
+    /*
+    var a = 2;
+    var x = 1 + (a *= 2); // x равен 5, така как сначала происходит умножение, а							затем присвоение.
+    */
+
+
+    //Задача 3
+
+    /*
+    var a = +prompt("Введите любое цисло 1: ");
+    var b = +prompt("Введите любое цисло 2: ");
+    if(a > 0 && b > 0){
+        c = a - b;
+        alert(c);
+    } else if (a < 0 && b < 0){
+        c = a * b;
+        alert(c);
+    } else if (a <= 0 && b >= 0 || a >= 0 && b <= 0){
+        c = a + b;
+        alert(c);
+    }
+    */
+
+    //Задача 4
+
+    /*
+    function list(n){
+        if(n == -1){
+            return;
+        }
+        console.log(n);
+        list(n - 1);
+    }
+
+    list(parseInt(Math.random() * (16 - 0) + 0))
+    */
+    /*
+    var a = parseInt(Math.random() * (16 - 0) + 0);
+    switch(a){
+        case 0: 
+         console.log("0");
+        case 1: 
+         console.log("1");
+        case 2: 
+         console.log("2");
+        case 3: 
+         console.log("3");
+        case 4: 
+         console.log("4");
+        case 5: 
+         console.log("5");
+        case 6: 
+         console.log("6");
+        case 7: 
+         console.log("7");
+        case 8: 
+         console.log("8");
+        case 9: 
+         console.log("9");
+        case 10: 
+         console.log("10");
+        case 11: 
+         console.log("11");
+        case 12: 
+         console.log("12");
+        case 13: 
+         console.log("13");
+        case 14: 
+         console.log("14");
+        case 15: 
+         console.log("15");
+         break;
+
+    }
+    */
+
+    //Задача 5
+
+
+    function sum(a, b) {
+        return a + b;
+    }
+
+    function multi(a, b) {
+        return a * b;
+    }
+
+    function diff(a, b) {
+        return a - b;
+    }
+
+    function div(a, b) {
+        return a / b;
+    }
+
+
+
+
+    //Задача 6
+
+
+    function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+            case "+":
+                return sum(arg1, arg2);
+                break;
+            case "-":
+                return diff(arg1, arg2);
+                break;
+            case "*":
+                return multi(arg1, arg2);
+                break;
+            case "/":
+                return div(arg1, arg2);
+                break;
+        }
+        return;
+    }
+
+    mathOperation(5, 7, "*");
+
+	// Задача 7
+
+    /* Я пока смутно это могу понять а тем болеее объяснить, но как я понял "null" представляет собой отсутсвиекакого-либо объекта, другими слова это "ничто", а "0" это число.*/
+
+
+
+</script>
