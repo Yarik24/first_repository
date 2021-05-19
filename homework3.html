@@ -24,6 +24,39 @@
             i++;
         }
 
+        // Задача 2 и 3
+
+            var cart = [
+                    {
+                        title: "good 1",
+                        price: 250,
+                        count: 3
+                    },
+                    {
+                        title: "good 2",
+                        price: 354.50,
+                        count: 1
+                    },
+                    {
+                        title: "good 3",
+                        price: 1058,
+                        count: 2
+                    }
+
+                ];
+
+                function countCartPrice(x) {
+                    var sum = 0;
+                    for (var item of cart) {
+                        sum = parseFloat(sum + (item.price * item.count));
+                        console.log(item.title + " стоит " + item.price);
+                    }
+                    alert("Сумма товаров = " + sum);
+
+                }
+
+                countCartPrice(cart);
+
 
 
 
