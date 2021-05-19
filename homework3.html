@@ -1,0 +1,86 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+  
+    // Задача 1
+
+    var i = 2;
+
+        function isPrime(num) {
+            var j = 2;
+            var sqrt = Math.sqrt(num);
+            while (j <= sqrt) {
+                if (num % j == 0) {
+                    return false;
+                }
+                j++
+            }
+            return num > 1;
+        }
+
+        while (i <= 100) {
+            if (isPrime(i) == true) {
+                console.log(i);
+            }
+            i++;
+        }
+
+        // Задача 2 и 3
+
+            var cart = [
+                    {
+                        title: "good 1",
+                        price: 250,
+                        count: 3
+                    },
+                    {
+                        title: "good 2",
+                        price: 354.50,
+                        count: 1
+                    },
+                    {
+                        title: "good 3",
+                        price: 1058,
+                        count: 2
+                    }
+
+                ];
+
+                function countCartPrice(x) {
+                    var sum = 0;
+                    for (var item of cart) {
+                        sum = parseFloat(sum + (item.price * item.count));
+                        console.log(item.title + " стоит " + item.price);
+                    }
+                    alert("Сумма товаров = " + sum);
+
+                }
+
+                countCartPrice(cart);
+
+
+                // Задача 4
+
+                for (var i = 0; i <= 9; console.log(i++));
+
+
+                // Задача 5
+
+
+                
+                    var str = "";
+
+                    for (var i = 0; i < 20; i++) {
+                        str = str + "x";
+                        console.log(str + `<br>`);
+                    }
+
+
+
+
+
+
+
+
+
+
+</script>
