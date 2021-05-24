@@ -1,6 +1,26 @@
 <meta charset="utf-8">
 <script type="text/javascript">
 
+    function transformNum(num) {
+        if (isNaN(num)) {
+            console.log('Вы ввели не число');
+        } else if (num < 0 || num > 999) {
+            console.log('Число выше допустимого диапазона');
+            var object = {};
+            return object;
+        } else {
+            var digits = ['Единицы', 'Десятки', 'Сотни'];
+            var object = {};
+            for (var i = 0; num != 0; i++) {
+                object[digits[i]] = num % 10;
+                num = (num - num % 10) / 10;
+            }
+        }
+        return object;
+    }
 
+    console.log(transformNum(243));
+    console.log(transformNum(25));
+    console.log(transformNum(3));
 
 </script>
