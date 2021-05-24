@@ -1,6 +1,10 @@
 <meta charset="utf-8">
 <script type="text/javascript">
 
+
+    // Задача 1
+
+
     function transformNum(num) {
         if (isNaN(num)) {
             console.log('Вы ввели не число');
@@ -22,5 +26,78 @@
     console.log(transformNum(243));
     console.log(transformNum(25));
     console.log(transformNum(3));
+
+
+    // Задача 2
+
+
+
+    var event, ok;
+
+    var answers = [];// массив для подсчета ответов
+
+    function quest(question, answer1, answer2) { // Функция для оптимизации когда и заполнения массива ответов
+        ok = false;
+        do {
+            event = +prompt(question + answer1 + answer2 + '-1 - Выход из игры');
+            if (event == -1) {
+                break;
+            }
+            else {
+                ok = isAnswer(works.d0, event);
+            }
+
+        } while (!ok);
+
+        switch (event) {
+            case 1: answers.push([question, answer1]);
+                break;
+            case 2: answers.push([question, answer2]);
+                break;
+            case -1: answers.push([question, 'Вы вышли из игры']);
+                break;
+        }
+        return event;
+    }
+
+    switch (quest(works.a00, works.a1, works.a2)) {//Выводим первый вопрос
+        case 1: // Первое действие  - если в первом окне ввели 1 то открываем серию окон - окно 2
+            switch (quest(works.b00, works.b1, works.b2)) {
+                case 1: // Второе действие, если во 2 окне ввели 1 то переходим на 4 окно
+                case 2: // Второе действие   Если ввели 2 то также переходим на 4 окно
+                    quest(works.d00, works.d1, works.d2);
+                    break;
+                case -1: // Второе действие
+                    break;
+                default:
+                    alert('Ошибка');
+            }
+            break;
+        case 2: // Первое действие    Если в 1 окне ввели 2 то переходим к 3 окну
+            switch (quest(works.c00, works.c1, works.c2)) {
+                case 1: // Второе действие
+                case 2: // Второе действие
+                    quest(works.d00, works.d1, works.d2);
+                    break;
+                case -1: // Второе действие
+                    break;
+                default:
+                    alert('Ошибка');
+            }
+            break;
+        case -1: // Первое действие
+            break;
+        default:
+            alert('Ошибка');
+    }
+    alert('Спасибо за игру');
+
+    console.log(answers);
+    var end = +prompt('Введите номер хода:');
+
+    console.log('Во время хода № ' + end + ' ' + answers[end - 1][0] + " Вы выбрали " + answers[end - 1][1]);
+
+
+
 
 </script>
