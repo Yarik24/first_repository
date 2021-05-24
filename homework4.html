@@ -98,6 +98,78 @@
     console.log('Во время хода № ' + end + ' ' + answers[end - 1][0] + " Вы выбрали " + answers[end - 1][1]);
 
 
+    // Задача 3
+
+
+    var questions = [
+        {
+            question: "Вопрос 1",
+            answer1: 'Ответ 1',
+            answer2: 'Ответ 2',
+            answer3: 'Ответ 3',
+            answer4: 'Ответ 4',
+            correct: 1
+        },
+        {
+            question: "Вопрос 2",
+            answer1: 'Ответ 1',
+            answer2: 'Ответ 2',
+            answer3: 'Ответ 3',
+            answer4: 'Ответ 4',
+            correct: 3
+        },
+        {
+            question: "Вопрос 3",
+            answer1: 'Ответ 1',
+            answer2: 'Ответ 2',
+            answer3: 'Ответ 3',
+            answer4: 'Ответ 4',
+            correct: 2
+        },
+        {
+            question: "Вопрос 4",
+            answer1: 'Ответ 1',
+            answer2: 'Ответ 2',
+            answer3: 'Ответ 3',
+            answer4: 'Ответ 4',
+            correct: 4
+        },
+        {
+            question: "Вопрос 5",
+            answer1: 'Ответ 1',
+            answer2: 'Ответ 2',
+            answer3: 'Ответ 3',
+            answer4: 'Ответ 4',
+            correct: 2
+        }
+    ]
+    var userAnswer, goals = 0, bank = 0;
+    alert("Добро пожаловать в игру 'Кто хочет стать миллионером?'");
+    for (var i = 0; i < questions.length; i++) {
+        userAnswer = +prompt("Вопрос № " + (i + 1) + " " + questions[i].question + '\nВарианты ответов:\n' + questions[i].answer1 + "\n" + questions[i].answer2 + "\n" + questions[i].answer3 + "\n" + questions[i].answer4 + '\n Для выхода нажмите -1');
+        if (userAnswer == -1) {
+            alert('Спасибо за игру! Возвращайтесь к нам еще!')
+            break;
+        } else if (userAnswer > 4) {
+            alert("Введенное значение превышает количество вариантов.\nВведите ответ заново");
+            i--;
+        } else if (isNaN(userAnswer)) {
+            alert("Вы ввели некорректное значение!\n" + "Введите ответ заново");
+            i--;
+        }
+        else if (userAnswer == questions[i].correct) {
+            bank = bank + ((i + 1) * 1000);
+            alert("Вы ответили верно.\n" + "Ваш выигрыш составил " + bank + ' рублей');
+            goals++;
+        } else {
+            alert('Вы ответили неверно!')
+        }
+    }
+    alert("Вы ответели верно на  " + goals + 'вопросов.\n' + " Ваш выигрыш: " + bank + "рублей");
+
+
+
+
 
 
 </script>
