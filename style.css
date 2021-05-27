@@ -1,6 +1,45 @@
-.chess {
-  border: 3px solid;
-  width: 200px;
-  height: 200px;
+table {
+  font-family: Impact, sans-serif;
+  font-size: 30px;
+  background-color: white;
+  color: #3a2702;
+}
+
+td {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+tr:nth-child(even) td:nth-child(odd) {
+  background-color: brown;
+}
+
+tr:nth-child(odd) td:nth-child(even) {
+  background-color: brown;
+}
+
+tr:last-child td:nth-child(odd),
+tr:first-child td:nth-child(even) {
+  background-color: white;
+}
+
+tr:nth-child(even) td:first-child {
+  background-color: white;
+}
+
+tr:nth-child(odd) td:last-child {
+  background-color: white;
+}
+
+tr:first-child td:nth-child(-n + 10) {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+td:last-child {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 /*# sourceMappingURL=style.css.map */

@@ -8,44 +8,6 @@
     <title>Шахматная доска</title>
 </head>
 <body>
-    <div class="block" ></div>
-
-
-    <script>
-        var table = document.createElement("table"), tr, td;
-        for(var i = 1; i <= 8;i++){
-            tr = document.createElement('tr');
-            table.append(tr);
-            if( i % 2 == 0){
-                for(var j = 1; j <= 8;j++){
-                    td = document.createElement("td");
-                    tr.append(td);
-                    if(j % 2 == 0){
-                        td.style = "background-color : white";
-                    } 
-                    else {
-                        td.style = "background-color : black";
-                    };
-                };
-            } 
-            else {
-               for(var j = 1; j <= 8;j++){
-                   td = document.createElement("td");
-                   tr.append(td);
-                    if(j % 2 == 0){
-                        td.style = "background-color : black";
-                    } else {
-                        td.style = "background-color : white";
-                    };
-                } ;
-            }          
-        }
-        document.querySelector("div").append(table);
-        table.className = "chess";
-        //tr.classList.add("line");
-        //td.className = "column";
-
-
-    </script>
-</body>
-</html>
+    <script src="chess.js"></script>
+ </body>
+ </html>
