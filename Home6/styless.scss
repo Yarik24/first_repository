@@ -1,23 +1,11 @@
-body {
-  font-family: sans-serif;
+#slider {
+  width: 50%;
+  height: 400px;
 }
 
-.carousel-item img {
-  height: 75vh;
-  object-fit: contain;
-  position: relative;
-}
-
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-  padding: 25px;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  background: grey;
-  height: 60px;
-  width: 60px;
-  border-radius: 10px;
-  top: 45%;
+.conteiner {
+  display: flex;
+  align-items: center;
+  margin-left: 380px;
+  margin-top: 150px;
 }
