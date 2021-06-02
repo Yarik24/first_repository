@@ -1,22 +1,18 @@
+var mas = ["1.jpg","2.jpg","3.jpg","4.jpg"];
+var i = 0;
 
+function forward(id){
+var img = document.getElementById(id);
 
-// 1. Доработать функцию замены картинки в галерее таким образом,
-// чтобы она проверяла наличие картинки по указанному в src адресу.
-// 2. Реализовать модуль корзины. Создать блок товаров и блок корзины.
-// У каждого товара есть кнопка «Купить», при нажатии на которую происходит
-// добавление имени и цены товара в блок корзины. Корзина должна уметь
-// считать общую сумму заказа.
-// 3. *Добавить в галерею функцию перехода к следующему изображению.
-// По сторонам от большой картинки должны быть стрелки «вперед» и «назад»,
-// по нажатию на которые происходит замена изображения на
-// следующее или предыдущее.
+(i == mas.length - 1) ? i = 0 : i++;
 
-var masImagesObjs = document.querySelectorAll(".small-img");
-// console.log(masImagesObjs);
-
-for (var item of masImagesObjs) {
-  // console.log(item);
-  item.onclick = function(e) {
-    console.log(e.target);
-  };
+img.src = "img\\" + mas[i]; 
 }
+
+function back(id){
+    var img = document.getElementById(id);
+    
+    (i == 0) ? i = 2 : i--;
+    
+    img.src = "img\\" + mas[i]; 
+    }
